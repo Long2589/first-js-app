@@ -1,12 +1,12 @@
 let pokemonList = [
 	{
-		name: 'Charizard',
-		types: ['fire', 'flying'],
-		height: 1.7,
-		weight: 90.5
+	  name: 'Charizard',
+	  types: ['fire', 'flying'],
+	  height: 1.7,
+	  weight: 90.5
 	},
 	{
-		name: 'Seadra',
+	  name: 'Seadra',
 	  types: ['water'],
 	  height: 1.2,
 	  weight: 25
