@@ -1,0 +1,29 @@
+
+:root {
+  --heading-font-family: 'Zen Dots', cursive;
+  --heading-font-weight: 500;
+  --body-font-family: 'Spectral', sans-serif;
+  --body-font-weight: 200;
+  --body-background-color: #f9dc5c;
+  --body-text-color: #bf211e;
+}
+
+
+body {
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: 38px;
+  font-weight: var(--heading-font-weight);
+}
+
+.pokemonList {
+
+}

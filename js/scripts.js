@@ -36,3 +36,13 @@ let pokemonList = [
 	  weight: 42
 	}
 ];
+
+//For loop to iterate over objects in pokemonList array:
+for (let i = 0; i < pokemonList.length; i++) {
+//Conditional to display message for tall pokemon:
+	if (pokemonList[i].height >= 2) {
+		document.write (pokemonList[i].name + " " + " (height: " + pokemonList[i].height + ")" + " Wow - that's a big Pokemon!" + "<br />");
+	}else {
+		document.write (pokemonList[i].name + " " + " (height: " + pokemonList[i].height + ")" + "<br />");
+	}
+}
