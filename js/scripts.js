@@ -8,7 +8,7 @@ let pokemonRepository = (function () {
 		) {
 			pokemonList.push(pokemon);
 		} else {
-			console.log("pokemon is not correct");
+		  console.log("pokemon is not correct");
 		}
 	}
 
@@ -30,33 +30,33 @@ let pokemonRepository = (function () {
 	}
 
 	function loadList() {
-    return fetch(apiUrl).then(function (response) {
-      return response.json();
-    }).then(function (json) {
-      json.results.forEach(function (item) {
-        let pokemon = {
-          name: item.name,
-          detailsUrl: item.url
-        };
-        add(pokemon);
-				console.log(pokemon);
-      });
-    }).catch(function (e) {
-      console.error(e);
-    });
-  }
+	    return fetch(apiUrl).then(function (response) {
+	      	return response.json();
+	    }).then(function (json) {
+	        json.results.forEach(function (item) {
+		        let pokemon = {
+		            name: item.name,
+		            detailsUrl: item.url
+		        };
+		        add(pokemon);
+		        console.log(pokemon);
+            });
+        }).catch(function (e) {
+            console.error(e);
+        });
+    }
 
 	function loadDetails(item) {
-    let url = item.detailsUrl;
-    return fetch(url).then(function (response) {
-      return response.json();
-    }).then(function (details) {
-      item.imageUrl = details.sprites.front_default;
-      item.height = details.height;
-      item.types = details.types;
-    }).catch(function (e) {
-      console.error(e);
-    });
+        let url = item.detailsUrl;
+        return fetch(url).then(function (response) {
+            return response.json();
+        }).then(function (details) {
+            item.imageUrl = details.sprites.front_default;
+            item.height = details.height;
+            item.types = details.types;
+        }).catch(function (e) {
+            console.error(e);
+        });
 	}
 
 	function showDetails(item) {
